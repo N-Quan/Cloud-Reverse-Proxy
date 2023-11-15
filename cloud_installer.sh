@@ -7,7 +7,7 @@ sudo apt install wireguard -y
 wg genkey | sudo tee -a /etc/wireguard/wg0.conf | wg pubkey | sudo tee /etc/wireguard/publickey
 
 # Get home server public key
-echo "Enter the public key from your home server:" 
+echo "Enter the public key from your home server/ local machine:" 
 read -r home_server_pubkey
 
 # Wireguard Config
@@ -48,4 +48,7 @@ sudo sysctl --system
 sudo systemctl start wg-quick@wg0 
 sudo systemctl enable wg-quick@wg0
 
+clear
+echo "Cloud Server public key is:"
+cat /etc/wireguard/publickey
 echo "Wireguard Successfully Configured!"
