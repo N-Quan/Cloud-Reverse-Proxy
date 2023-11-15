@@ -9,11 +9,11 @@ wg genkey | sudo tee -a /etc/wireguard/wg0.conf | wg pubkey | sudo tee /etc/wire
 
 # Get VPS public IP
 echo "Enter the public IP of your VPS/ Cloud Server:" 
-read -r vps_public_ip
+read -r vps_public_ip </dev/tty
 
 # Get VPS public key
 echo "Enter the public key from your VPS/ Cloud Server:" 
-read -r vps_pubkey
+read -r vps_pubkey </dev/tty
 
 # Wireguard Config
 echo "Address = 192.168.4.2 
@@ -62,6 +62,6 @@ docker run -d \
 clear 
 
 echo "Local Machine public key is:"
-cat /etc/wireguard/publickey
+sudo cat /etc/wireguard/publickey
 echo "Portainer is running on $(hostname -I | awk '{print $1}'):9443"
 echo "Setup Nginx Proxy Manager at $(hostname -I | awk '{print $1}'):81 to start hosting your services to the web!"

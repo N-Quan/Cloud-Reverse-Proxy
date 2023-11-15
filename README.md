@@ -17,13 +17,13 @@ This project configures a Reverse Proxy-over-VPN (RPoVPN) and is ideal for those
 ### 1. Cloud Installer
 Run this script on the Cloud Server and follow prompts
 ```
-curl -s https://raw.githubusercontent.com/N-Quan/Self-Hosted-Gateway/main/cloud_installer.sh | sudo bash
+curl -s https://raw.githubusercontent.com/N-Quan/Self-Hosted-Gateway/main/cloud_installer.sh | bash
 ```
 
 ### 2. Local Installer
 Run this script on your Local Machine and follow prompts.
 ```
-curl -s https://raw.githubusercontent.com/N-Quan/Self-Hosted-Gateway/main/local_installer.shh | sudo bash
+curl -s https://raw.githubusercontent.com/N-Quan/Self-Hosted-Gateway/main/local_installer.shh | bash
 ```
 
 ### 3. Setup Nginx Proxy Manager (NPM)
